@@ -12,23 +12,19 @@ class TestStringCombinations(unittest.TestCase):
 
         self.assertEqual(expected, result)
 
+    def test_works_with_length_3(self):
+        char_set = {'a', 'b'}
+        expected = {
+            'aaa',
+            'aab',
+            'aba',
+            'abb',
+            'baa',
+            'bab',
+            'bba',
+            'bbb'
+        }
 
-"""
-Return all possible combinations of strings of given length,
-which can be formed from a set of supplied characters.
+        result = string_combination(char_set, 3)
 
-Input:
-char_set = {'a', 'b'}, length = 3
-
-Output:
-aaa
-aab
-aba
-abb
-baa
-bab
-bba
-bbb
-
-NB: we cannot use itertools product or permutations functions.
-"""
+        self.assertEqual(expected, result)

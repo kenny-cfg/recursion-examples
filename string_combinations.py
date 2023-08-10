@@ -4,17 +4,13 @@ def string_combination(char_set, length):
     raise NotImplementedError
 """
 Exit condition:
-* If length = 1, return the letters back
-{ 'a', 'b' }, length = 1 -> [ 'a', 'b' ]
-
-OR (if you're really clever):
-
 * If length = 0, return [ '' ]
 { 'a', 'b' }, length = 0 -> [ '' ]
 
 Recursion:
 * Work out the combinations with length as length - 1
-
+* Prepend in turn the elements of char_set
+* Add all those resulting strings to a new set
 
 Concrete example:
 char_set = {'a', 'b'}, length = 3

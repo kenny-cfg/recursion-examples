@@ -1,7 +1,13 @@
 def string_combination(char_set, length):
     if length == 1:
         return char_set
-    raise NotImplementedError
+    simpler_result = string_combination(char_set, length - 1)
+    result = set()
+    for character in char_set:
+        for simpler_result_entry in simpler_result:
+            result.add(character + simpler_result_entry)
+    return result
+
 """
 Exit condition:
 * If length = 0, return [ '' ]

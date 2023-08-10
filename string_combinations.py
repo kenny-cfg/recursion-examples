@@ -1,5 +1,7 @@
 def string_combination(char_set, length):
-    pass
+    if length == 1:
+        return char_set
+    raise NotImplementedError
 """
 Exit condition:
 * If length = 1, return the letters back
